@@ -1,5 +1,5 @@
 import streamlit as st
-from groq import Groq
+from groq import Groq#ANDA DALE
 from functions import configPage as cp, configAI as ca, ments as h
 
 def main():
@@ -11,6 +11,7 @@ def main():
     msg = cp.config_chat()
     h.area_chat()
 
+    #Verifica que el mensaje no esté vacío
     if msg:
         h.actualizar_historial("user", msg, "🐶")
         chatCompleto= ca.config_model(clienteUS, mdl, msg)
